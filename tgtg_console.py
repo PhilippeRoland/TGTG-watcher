@@ -83,13 +83,13 @@ class AddFavConsole(AbstractConfirmationConsole):
         add_favorite(client, context.tmpId)
         print('Store added to favorites')
     
-class RmFavConsole(ContextConsole):
+class RmFavConsole(AbstractConfirmationConsole):
     def perform_action(self, args):
         rm_favorite(client, context.tmpId)
         print('Store removed from favorites')
 
 if __name__ == '__main__':
-    initial_debug = True # TODO CHANGEME
+    initial_debug = False
     #TODO check file presence instead of relying on exception
     try:
         client = read_user()

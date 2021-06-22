@@ -12,8 +12,7 @@ def list_favorites(client):
             page_size=400)
         #TODO debug
         for item in items:
-            if(item['items_available'] > 0):
-                print("\t" + format_item(item))
+            print("\t" + format_item(item))
         print('\n')
     except TgtgAPIError as err:
         print_api_error(err)
