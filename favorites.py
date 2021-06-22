@@ -1,5 +1,3 @@
-import json
-from tgtg import TgtgClient
 from tgtg import TgtgAPIError
 from utils import print_api_error, format_item, log
 from difflib import get_close_matches
